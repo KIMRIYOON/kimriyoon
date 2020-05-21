@@ -3,13 +3,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="/resources/js/user.js"></script>
+<title>CSS3 Property Basic</title>
+<style>
+h1 {
+	background-color: rgb(150, 200, 230);
+}
+</style>
 </head>
 <body>
-	<h1>JavaScript 구현 예</h1>
-	<p id="exam">변경 전</p>
-	<button type="button" onclick="myFunction()">변경</button>
-	
+	<h1>Header - 1</h1>
+	<h2>Header - 2</h2>
+	<h3>Header - 3</h3>
+	<h4>Header - 4</h4>
+	<h5>Header - 5</h5>
+	<h6>Header - 6</h6>
 </body>
 </html>
