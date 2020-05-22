@@ -3,28 +3,76 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>html5 테스트입니다.</title>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="/resources/js/user.js"></script>
+<style></style>
 </head>
 <body>
-	<h1>JavaScript 구현 예</h1>
-	<p id="exam">변경 전</p>
-	<button type="button" onclick="myFunction()">변경</button>
-	
+<table summary="00학교 00반 성적표">
+
+<caption>이 테이블은 학생들의 성적표 입니다.</caption>
+
+<tr>
+
+<th>이름</th>
+
+<th>성적</th>
+
+</tr>
+
+<tr>
+
+<td>AAA</td>
+
+<td>A</td>
+
+</tr>
+
+<tr>
+
+<td colspan="2">BBB</td>
+
+</tr>
+
+<tr>
+
+<td>CCC</td>
+
+<td>C</td>
+
+</tr>
+
+
+
+</table>
+<div>
+<h2>회원가입을 환영합니다.</h2>
+<form method="get" action="http://localhost:8080" class="adminlogin_form">
+
+
+
+<input type="text" name="userid" preholder="user ID" >
+
+<input type="password" name="password" preholder="user password">
+
+<input type="file">
+
+<input type="submit" name="submit" value="로그인" class="login">
+
+
+
+
+</form>    
+</div>
+<br><br><br>
+<textarea name="contents" cols="50" rows="6"> 
+
+여기에 글을 입력하면
+이런식으로 나오게 됩니다.
+
+</textarea>
 </body>
-<head>
-<title>main page layout</title>
-</head>
-<body>
-	<header id="main_header">
-		로고 및 회사명 / 초기메뉴
-		<nav id="main_gnb">메인 메뉴</nav>
-	</header>
-	<div id="content">
-		<section id="main_section">
-			<article class="main_article">공지사항 등</article>
-		</section>
-		<footer id="main_footer"> 개인정보보호 및 주소 등 </footer>
-</body>
+
 </html>
 
