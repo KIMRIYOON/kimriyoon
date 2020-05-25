@@ -15,12 +15,8 @@
 <link rel="stylesheet" type="text/css" href="/resources/css/reset.css">
 <link rel="stylesheet" type="text/css" href="/resources/css/common.css">
 <style>
-/* HOME 슬라이더 영역 CSS */
-.slider img {
-display:block;
-width:100%;
-max-width:100%;
-height:auto;
+/* We are 영역 CSS */
+
 }
 </style>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -31,7 +27,7 @@ height:auto;
 </script>
 </head>
 <body>
-<!-- 더미 데이터:CSS작업전 내용 -->
+	<!-- 더미 데이터:CSS작업전 내용 -->
 	<div id="wrap">
 		<header class="header cfixed">
 			<h1 class="logo">
@@ -49,9 +45,30 @@ height:auto;
 			<span class="menu-toggle-btn"> <span></span> <span></span> <span></span>
 			</span>
 		</header>
-		<article class="slider">
-			<img src="/resources/images/hawaii.jpg" alt="">
-		</article>
+		<section class="content">
+
+			<section class="display-section">
+				<div class="container">
+					<h2 class="sec-tit">WE ARE</h2>
+					<p class="desc">
+						"휴먼 교육센터 디지털 컨버전스 과정 입니다." <br> "그리고, 지금은 화면 설계 시간 입니다."
+					</p>
+				</div>
+			</section>
+
+			<section class="promotion-section">
+				<div class="container">
+					<ul class="promo-list">
+						<li><a href> <img src="/resources/images/hawaii.jpg"
+								alt="">
+								<h3>HOME</h3>
+								<p>휴면 교육센터 디지털 컨버전스 과정 입니다.</p>
+						</a></li>
+					</ul>
+				</div>
+			</section>
+
+		</section>
 		<footer class="footer">
 			<p class="copyright">LOGO</p>
 		</footer>
