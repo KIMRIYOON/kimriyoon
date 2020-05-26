@@ -27,7 +27,6 @@ height:auto;
 <script src="/resources/js/common.js"></script>
 <!-- 사용자 스크립트 -->
 <script>
-
 </script>
 </head>
 <body>
