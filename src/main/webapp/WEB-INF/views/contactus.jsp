@@ -66,7 +66,12 @@ background:#3f51b5;
 font-family:"궁서체";
 cursor:pointer;
 }
+@media all and (min-width:768px) {
+/* 태블릿 CONTACT US 영역 CSS */
+.contactus-section {
 
+}
+}
 </style>
 <script src="/resources/js/jquery.min.js"></script>
 <script src="/resources/js/common.js"></script>
