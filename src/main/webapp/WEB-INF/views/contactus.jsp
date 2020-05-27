@@ -68,9 +68,24 @@ cursor:pointer;
 }
 @media all and (min-width:768px) {
 /* 태블릿 CONTACT US 영역 CSS */
-.contactus-section {
-
-}
+  .contact-section{
+  margin-top:176px;
+  }
+  .contact-section .sec-tit{
+  margin-bottom:76px;
+  }
+  .contact-section .form-box .form, .contact-section .form-box .textarea{
+  float:left;
+  width:48.69791666666667%;
+  /* 374px ÷ 768px*/
+  }
+  .contact-section .form-box .form{
+  margin-right:2.604166666666667%;
+  /* 20px ÷ 768px*/
+  }
+  .contact-section .form-box .form input:last-child{
+  margin-bottom:0;
+  }
 }
 </style>
 <script src="/resources/js/jquery.min.js"></script>
