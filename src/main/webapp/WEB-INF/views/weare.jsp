@@ -40,7 +40,7 @@ text-align:center;
 margin-top:0px;
 }
 .promotion-section .promo-list li img{
-height:52px;
+height:202px;
 }
 .promotion-section .promo-list li h3{
 margin:29px 0 20px 0;
@@ -72,6 +72,9 @@ margin-top:0;
 }
 .promotion-section .promo-list li:first-child{
 margin-left:0;
+}
+.promotion-section .promo-list li img{
+height:102px;
 }
 }
 </style>
