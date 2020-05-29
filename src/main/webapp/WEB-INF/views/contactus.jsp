@@ -86,6 +86,23 @@ cursor:pointer;
   .contact-section .form-box .form input:last-child{
   margin-bottom:0;
   }
+/* PC CONTACT US 영역 CSS */
+@media all and (min-width:1132px) {
+.contact-section .sec-tit {
+float:left;
+margin-bottom:0;
+}
+.contact-section .form-box {
+float:right;
+width:74.5583888888%;
+}
+.contact-section .form-box .form, 
+.comtact-section .form-box .textarea {
+width:48.81516587777%;
+}
+cotnact-section .form-box .form {
+margin-right:2.3696688888%;
+}
 }
 </style>
 <script src="/resources/js/jquery.min.js"></script>

@@ -98,6 +98,15 @@ left:37px;
 .work-section .work-list li a:hover
 transform:translateY(37px);
 }
+/* PC용 WORK 영역 CSS */
+@media all and (min-width:1132px) {
+.work-section .sec-tit {
+text-align:left;
+}
+.work-section .work-list li {
+width:25%;
+}
+}
 </style>
 <script src="/resources/js/jquery.min.js"></script>
 <script src="/resources/js/common.js"></script>
@@ -133,7 +142,7 @@ transform:translateY(37px);
   <h3>작업1</h3>
   <span>소스/작업1</span>
   </div>
-  <img src="/resources/images/hawaii.jpg" alt="">
+  <img src="/resources/images/hawaii.jpg.jpg" alt="">
   </a>
   </li>
     <li>
@@ -142,7 +151,7 @@ transform:translateY(37px);
   <h3>작업1</h3>
   <span>소스/작업1</span>
   </div>
-  <img src="/resources/images/hawaii.jpg" alt="">
+  <img src="/resources/images/hawaii.jpg.jpg" alt="">
   </a>
   </li>
     <li>
@@ -151,7 +160,7 @@ transform:translateY(37px);
   <h3>작업1</h3>
   <span>소스/작업1</span>
   </div>
-  <img src="/resources/images/hawaii.jpg" alt="">
+  <img src="/resources/images/hawaii.jpg.jpg" alt="">
   </a>
   </li>
     <li>
@@ -160,7 +169,7 @@ transform:translateY(37px);
   <h3>작업1</h3>
   <span>소스/작업1</span>
   </div>
-  <img src="/resources/images/hawaii.jpg" alt="">
+  <img src="/resources/images/hawaii.jpg.jpg" alt="">
   </a>
   </li>
     <li>
@@ -169,7 +178,7 @@ transform:translateY(37px);
   <h3>작업1</h3>
   <span>소스/작업1</span>
   </div>
-  <img src="/resources/images/hawaii.jpg" alt="">
+  <img src="/resources/images/hawaii.jpg.jpg" alt="">
   </a>
   </li>
     <li>
@@ -178,7 +187,7 @@ transform:translateY(37px);
   <h3>작업1</h3>
   <span>소스/작업1</span>
   </div>
-  <img src="/resources/images/hawaii.jpg" alt="">
+  <img src="/resources/images/hawaii.jpg.jpg" alt="">
   </a>
   </li>
     <li>
@@ -187,7 +196,7 @@ transform:translateY(37px);
   <h3>작업1</h3>
   <span>소스/작업1</span>
   </div>
-  <img src="/resources/images/hawaii.jpg" alt="">
+  <img src="/resources/images/hawaii.jpg.jpg" alt="">
   </a>
   </li>
     <li>
@@ -196,7 +205,7 @@ transform:translateY(37px);
   <h3>작업1</h3>
   <span>소스/작업1</span>
   </div>
-  <img src="/resources/images/hawaii.jpg" alt="">
+  <img src="/resources/images/hawaii.jpg.jpg" alt="">
   </a>
   </li>
   </ul>

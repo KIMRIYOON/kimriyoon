@@ -77,6 +77,41 @@ margin-left:0;
 height:102px;
 }
 }
+@media all and (min-width:1132px){
+  /* PC WE ARE 영역 CSS */
+  .display-section{
+  text-align:left;
+  }
+  .display-section .sec-tit{
+  float:left;
+  margin-bottom:0;
+  }
+  .display-section .desc{
+  position:relative;
+  float:right;
+  padding-left:20px;
+  font-family:'PT Serif';
+  color:#616161; 
+  line-height:1.9;
+  }
+  .display-section .desc:before{
+  display:block;
+  position:absolute;
+  top:9px;
+  left:0;
+  width:2px;
+  height:44px;
+  background:#e0e0e0;
+  content:"";
+  }
+  /* PC WE ARE 내용 영역 CSS */
+  .promotion-section .promo-list li{
+  width:23.67491166077739%;
+  /* 268px ÷ 1132px*/
+  margin-left:1.76678445229682%;
+  /* 20px ÷ 1132px*/
+  }
+  }
 </style>
 <script src="/resources/js/jquery.min.js"></script>
 <script src="/resources/js/common.js"></script>
@@ -118,22 +153,22 @@ height:102px;
 			<section class="promotion-section">
 				<div class="container">
 					<ul class="promo-list">
-						<li><a href="#" onclick="return false"> <img src="/resources/images/hawaii.jpg"
+						<li><a href="#" onclick="return false"> <img src="/resources/images/hawaii.jpg.jpg"
 								alt="">
 								<h3>HOME</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다.</p>
 						</a></li>
-												<li><a href"#"> <img src="/resources/images/hawaii.jpg"
+												<li><a href"#"> <img src="/resources/images/hawaii.jpg.jpg"
 								alt="">
 								<h3>HOME</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다.</p>
 						</a></li>
-												<li><a href"#"> <img src="/resources/images/hawaii.jpg"
+												<li><a href"#"> <img src="/resources/images/hawaii.jpg.jpg"
 								alt="">
 								<h3>HOME</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다.</p>
 						</a></li>
-												<li><a href"#"> <img src="/resources/images/hawaii.jpg"
+												<li><a href"#"> <img src="/resources/images/hawaii.jpg.jpg"
 								alt="">
 								<h3>HOME</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다.</p>

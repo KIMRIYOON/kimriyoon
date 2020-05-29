@@ -66,6 +66,20 @@ line-height:1.6;
   .blog-section .blog-list li:first-child{
   margin-left:0;
   }
+/* PC용 BLOG 영역 CSS */
+@media all and (min-width:1132px) {
+.blog-section .sec-tit {
+float:left;
+margin-bottom:0;
+}
+.blog-section .blog-list {
+float:right;
+width:74.5555555555%;
+}
+.blog-section .blog-list li {
+width:31.75355555555%;
+margin-left:2.36966666666%;
+}
 }
 </style>
 <script src="/resources/js/jquery.min.js"></script>
@@ -97,13 +111,13 @@ line-height:1.6;
 			<div class="container">
 				<h2 class="sec-tit">blog</h2>
 				<ul class="blog-list">
-					<li><a href="#" onclick="return false"><img src="/resources/images/hawaii.jpg" alt=""></a>
+					<li><a href="#" onclick="return false"><img src="/resources/images/hawaii.jpg.jpg" alt=""></a>
 						<time datetime="2016-10-30">OCT 30, 2016</time> <a href=""><h3>타임스페이스는
 								사용자 중심의 웹페이지를 제작하는 회사 입니다.</h3></a></li>
-					<li><a href="#" onclick="return false"><img src="resources/images/hawaii.jpg" alt=""></a>
+					<li><a href="#" onclick="return false"><img src="resources/images/hawaii.jpg.jpg" alt=""></a>
 						<time datetime="2016-10-30">OCT 30, 2016</time> <a href=""><h3>타임스페이스는
 								사용자 중심의 웹페이지를 제작하는 회사 입니다.</h3></a></li>
-					<li><a href="#" onclick="return false"><img src="/resources/images/hawaii.jpg" alt=""></a>
+					<li><a href="#" onclick="return false"><img src="/resources/images/hawaii.jpg.jpg" alt=""></a>
 						<time datetime="2016-10-30">OCT 30, 2016</time> <a href=""><h3>타임스페이스는
 								사용자 중심의 웹페이지를 제작하는 회사 입니다.</h3></a></li>
 				</ul>

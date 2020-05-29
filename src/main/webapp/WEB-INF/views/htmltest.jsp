@@ -15,7 +15,7 @@
 	<h4>HTML의 태그</h4>
 	<h5>HTML의 태그</h5>
 	<a href="/htmltest">페이지 다시 로딩</a>
-	<img src="/resources/images/hawaii.jpg" alt="하와이노을이미지">
+	<img src="/resources/images/hawaii.jpg.jpg" alt="하와이노을이미지">
 	<p>
 		<strong>이것은</strong> 문단입니다.<br> <b>이것은</b> 문단입니다.
 	</p>
