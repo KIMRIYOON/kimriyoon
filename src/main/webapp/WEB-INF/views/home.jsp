@@ -15,6 +15,7 @@
 <link rel="stylesheet" type="text/css" href="/resources/css/reset.css">
 <link rel="stylesheet" type="text/css" href="/resources/css/common.css">
 <link rel="stylesheet" type="text/css" href="/resources/css/user.css">
+
 <style>
 .go_top {
 position: fixed;
@@ -28,6 +29,8 @@ opacity: 0.5;
 color:blue !important;
 }
 
+.footer {background-color:#ff9966;}
+
 </style>
 <script src="/resources/js/jquery.min.js"></script>
 <script src="/resources/js/common.js"></script>
@@ -40,7 +43,7 @@ color:blue !important;
 	<div id="wrap">
 		<header class="header cfixed">
 			<h1 class="logo">
-				<a href="">LOGO</a>
+				<img src="/resources/images/logo.png">
 			</h1>
 			<nav>
 				<ul class="gnb">
@@ -55,7 +58,7 @@ color:blue !important;
 			</span>
 		</header>
 		<article class="slider">
-			<img src="/resources/images/hawaii.jpg.jpg" alt="">
+			<img src="/resources/images/hawaii.jpg" alt="">
 		</article>
 
 		<section class="content">
@@ -72,22 +75,22 @@ color:blue !important;
 			<section class="promotion-section">
 				<div class="container">
 					<ul class="promo-list">
-						<li><a href="#" onclick="return false"> <img src="/resources/images/hawaii.jpg.jpg"
+						<li><a href="#" onclick="return false"> <img src="/resources/images/hawaii.jpg"
 								alt="">
 								<h3>HOME</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다.</p>
 						</a></li>
-												<li><a href"#"> <img src="/resources/images/hawaii.jpg.jpg"
+												<li><a href"#"> <img src="/resources/images/hawaii.jpg"
 								alt="">
 								<h3>HOME</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다.</p>
 						</a></li>
-												<li><a href"#"> <img src="/resources/images/hawaii.jpg.jpg"
+												<li><a href"#"> <img src="/resources/images/hawaii.jpg"
 								alt="">
 								<h3>HOME</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다.</p>
 						</a></li>
-												<li><a href"#"> <img src="/resources/images/hawaii.jpg.jpg"
+												<li><a href"#"> <img src="/resources/images/hawaii.jpg"
 								alt="">
 								<h3>HOME</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다.</p>
@@ -106,7 +109,7 @@ color:blue !important;
   <h3>작업1</h3>
   <span>소스/작업1</span>
   </div>
-  <img src="/resources/images/hawaii.jpg.jpg" alt="">
+  <img src="/resources/images/hawaii.jpg" alt="">
   </a>
   </li>
     <li>
@@ -115,7 +118,7 @@ color:blue !important;
   <h3>작업1</h3>
   <span>소스/작업1</span>
   </div>
-  <img src="/resources/images/hawaii.jpg.jpg" alt="">
+  <img src="/resources/images/hawaii.jpg" alt="">
   </a>
   </li>
     <li>
@@ -124,7 +127,7 @@ color:blue !important;
   <h3>작업1</h3>
   <span>소스/작업1</span>
   </div>
-  <img src="/resources/images/hawaii.jpg.jpg" alt="">
+  <img src="/resources/images/hawaii.jpg" alt="">
   </a>
   </li>
     <li>
@@ -133,7 +136,7 @@ color:blue !important;
   <h3>작업1</h3>
   <span>소스/작업1</span>
   </div>
-  <img src="/resources/images/hawaii.jpg.jpg" alt="">
+  <img src="/resources/images/hawaii.jpg" alt="">
   </a>
   </li>
     <li>
@@ -142,7 +145,7 @@ color:blue !important;
   <h3>작업1</h3>
   <span>소스/작업1</span>
   </div>
-  <img src="/resources/images/hawaii.jpg.jpg" alt="">
+  <img src="/resources/images/hawaii.jpg" alt="">
   </a>
   </li>
     <li>
@@ -151,7 +154,7 @@ color:blue !important;
   <h3>작업1</h3>
   <span>소스/작업1</span>
   </div>
-  <img src="/resources/images/hawaii.jpg.jpg" alt="">
+  <img src="/resources/images/hawaii.jpg" alt="">
   </a>
   </li>
     <li>
@@ -160,7 +163,7 @@ color:blue !important;
   <h3>작업1</h3>
   <span>소스/작업1</span>
   </div>
-  <img src="/resources/images/hawaii.jpg.jpg" alt="">
+  <img src="/resources/images/hawaii.jpg" alt="">
   </a>
   </li>
     <li>
@@ -169,7 +172,7 @@ color:blue !important;
   <h3>작업1</h3>
   <span>소스/작업1</span>
   </div>
-  <img src="/resources/images/hawaii.jpg.jpg" alt="">
+  <img src="/resources/images/hawaii.jpg" alt="">
   </a>
   </li>
   </ul>
@@ -179,13 +182,13 @@ color:blue !important;
 			<div class="container">
 				<h2 class="sec-tit" id="blog">blog</h2>
 				<ul class="blog-list">
-					<li><a href="#" onclick="return false"><img src="/resources/images/hawaii.jpg.jpg" alt=""></a>
+					<li><a href="#" onclick="return false"><img src="/resources/images/hawaii.jpg" alt=""></a>
 						<time datetime="2016-10-30">OCT 30, 2016</time> <a href=""><h3>타임스페이스는
 								사용자 중심의 웹페이지를 제작하는 회사 입니다.</h3></a></li>
-					<li><a href="#" onclick="return false"><img src="resources/images/hawaii.jpg.jpg" alt=""></a>
+					<li><a href="#" onclick="return false"><img src="resources/images/hawaii.jpg" alt=""></a>
 						<time datetime="2016-10-30">OCT 30, 2016</time> <a href=""><h3>타임스페이스는
 								사용자 중심의 웹페이지를 제작하는 회사 입니다.</h3></a></li>
-					<li><a href="#" onclick="return false"><img src="/resources/images/hawaii.jpg.jpg" alt=""></a>
+					<li><a href="#" onclick="return false"><img src="/resources/images/hawaii.jpg" alt=""></a>
 						<time datetime="2016-10-30">OCT 30, 2016</time> <a href=""><h3>타임스페이스는
 								사용자 중심의 웹페이지를 제작하는 회사 입니다.</h3></a></li>
 				</ul>
