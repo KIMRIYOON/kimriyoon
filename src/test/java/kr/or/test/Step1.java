@@ -4,7 +4,7 @@ public class Step1 {
 
 	public static void main(String[] args) {
 		System.out.println("------------------------------");
-		System.out.println("클래스를 사용하지 않은 내장변수 자료형 소스");
+		System.out.println("클래스를 사용하지 않는 내장변수 자료형 소스");
 		// 필드=field=변수 <--다 같은 말
 		String name;
 		int age;
@@ -26,7 +26,7 @@ public class Step1 {
 		printMember(name, age, phoneNum);
 				
 		System.out.println("------------------------------");
-		System.out.println("클래스를 사용하지 않은 내장배열 자료형 소스");
+		System.out.println("내장변수 배열자료형 소스");
 	    // 필드=field=배열변수
 		String[] names = {"홍길동","성춘향","각시탈"};
 		System.out.println("현재 등록된 회원은" + names.length + " 명 입니다.");
@@ -38,7 +38,9 @@ public class Step1 {
 	}
     // 같은 이름의 매서드인데 파라미터(매개변수)를 다르게 만든 매서드를 오버로딩이라고 함. 이름은같아도, 로딩하는게 다름.
 	private static void printMember(String[] names, int[] ages, String[] phoneNums) {
-		for (int cnt=0; cnt<3; cnt++) {	
+		for (int cnt=0; cnt<3; cnt++) {	// <===== 0부터 시작하는데, 3보다는 작게, 점점 늘어나게 라는 뜻.
+			                            // <===== 그래서 cnt할때 0부터 시작하고 최대 3까지 카운트된다.
+			// 배열은 값을 참조할 때 주소(index)를 사용하는데, 그게 0번 주소부터 시작한다.
 			System.out.println("------------");
 				System.out.println(cnt + "번째 참조한 이름은 " + names[cnt] + " 님 입니다.");
 				System.out.println(cnt + "번째 참조한 나이는 " + ages[cnt] + " 살 입니다.");
