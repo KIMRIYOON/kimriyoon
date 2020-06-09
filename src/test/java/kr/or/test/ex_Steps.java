@@ -12,12 +12,10 @@
 // 배열은 값을 참조할 때 주소(index)를 사용하는데, 그게 0번 주소부터 시작한다. 그래서 cnt=0부터 시작하는거임
 
 
-
 // ★★★★★ Step 2 ★★★★★
 // ValueObject 클래스형 자료형
 // get set 메서드를 한번에 만드는 방법: 마우스오른쪽클릭-->Source--->Grenerate getters and setters
 // public void에서 void(0)는 실행 메서드이긴한데, 돌려받는값이 없음.반환값이 없음 void = return false
-
 
 
 // ★★★★★ Step 3 ★★★★★
