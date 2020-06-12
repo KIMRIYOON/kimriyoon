@@ -11,7 +11,7 @@ class WrongPasswordException extends Exception {
 	//패스워드 입력 오류에 대한 예외사항 처리 내용
 	public WrongPasswordException() {}
 	public WrongPasswordException(String message) {
-		super(message);
+		super(message); 
 	}
 }
 public class LoginTryCatch {
