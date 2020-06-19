@@ -24,3 +24,16 @@ public class MemberVO {
 		this.name = name;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
