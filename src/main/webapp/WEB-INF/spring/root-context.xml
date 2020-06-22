@@ -11,7 +11,6 @@
 		<jdbc:script location= "classpath:/db/edu_hsql.sql"/>
 	</jdbc:embedded-database>	
 	
-	
 	<!-- 테스트 실행용 DB매니저 실행:김리윤 추가 실제 사용시 아래 value - - 공백제거 하세요. 
 	<bean depends-on="dataSource"
 	class="org.springframework.beans.factory.config.MethodInvokingBean">
@@ -38,7 +37,7 @@
 	</bean>
 	-->
 	<!-- 로컬 PC 강제입력 방식 DB커넥션 정상작동 OK -->
-	<!-- 로컬 mysql ...139, 160, 326p.log4jdbc 설정후 
+	<!-- 로컬 mysql log4jdbc 설정후 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" 
 				  value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
@@ -46,6 +45,6 @@
 				  value="jdbc:log4jdbc:mysql://127.0.0.1:3306/edu"></property>
 		<property name="username" value="root"></property>
 		<property name="password" value="apmsetup"></property>
-		</bean>
-		-->
+		</bean>-->
+		
 </beans>
