@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>AdminLTE 3 | 관리자화면</title>
+  <title>member_write | 관리자화면</title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
@@ -15,6 +15,12 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini">
+<style>
+.button-group {
+float:left;
+margin-right:10px;
+}
+</style>
 <div class="wrapper">
  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
 
@@ -97,6 +103,12 @@
         </div><!-- /.row -->
         
 		<div class="card-header"></div> 
+		
+		<div class="progress mb-3">
+                  <div class="progress-bar bg-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                    <span class="sr-only">100% Complete</span>
+                  </div>
+                </div>
 
           <div class="col-12">
            <div class="col-sm-6">
@@ -159,7 +171,12 @@
                     </div> 
                     </div>   
                   <div class="col-sm-3">
-                  <button type="submit" class="btn btn-primary">Submit</button>     <button type="submit" class="btn btn-primary">List all</button></div>                 
+                  <div class="button-group">
+                  <button type="button" class="btn btn-block btn-warning">SUBMIT</button>
+                  </div>
+                  <div class="button-group">
+                  <button type="button" class="btn btn-block btn-info">LIST ALL</button>
+                  </div>                 
                   </div>
                   </div>
                   </form>
