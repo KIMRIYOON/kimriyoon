@@ -1,12 +1,4 @@
-2020-06-22 10:42:02,708  INFO [kr.or.test.Log4jTest] 인포!!
-2020-06-22 10:42:02,708  WARN [kr.or.test.Log4jTest] 워닝!!
-2020-06-22 10:42:02,708 ERROR [kr.or.test.Log4jTest] 에러!!
-2020-06-22 10:42:02,708 FATAL [kr.or.test.Log4jTest] 파탈에러!!
-2020-06-22 10:42:19,587  WARN [org.apache.log4j.joran.action.PriorityAction] Priority element has been deprecated, please use <level> instead.
-2020-06-22 10:42:19,603  INFO [kr.or.test.Log4jTest] test라는 매서드를 사용한 PC의 아이피는 : 192.168.56.1
-2020-06-22 10:42:19,603 DEBUG [kr.or.test.Log4jTest] 디버그!!MemberVO클래스 [이름은=홍길동, 나이는=24, 전화번호는=null]
-2020-06-22 10:42:19,603  INFO [kr.or.test.Log4jTest] 인포!!
-2020-06-22 10:42:19,603  WARN [kr.or.test.Log4jTest] 워닝!!
-2020-06-22 10:42:19,603 ERROR [kr.or.test.Log4jTest] 에러!!
-2020-06-22 10:42:19,603 FATAL [kr.or.test.Log4jTest] 파탈에러!!
-2020-06-22 10:42:31,320  WARN [org.apache.log4j.joran.action.PriorityAction] Priority element has been deprecated, please use <level> instead.
+2020-06-24 17:10:20,239  INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] Mapped "{[/sample/contactus],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.contactus(java.util.Locale,org.springframework.ui.Model)
+2020-06-24 17:10:20,240  INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] Mapped "{[/sample/slide],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.slide(java.util.Locale,org.springframework.ui.Model)
+2020-06-24 17:10:20,240  INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] Mapped "{[/sample/blog],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.blog(java.util.Locale,org.springframework.ui.Model)
+2020-06-24 17:10:20,240  INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] Mapped "{[/sample/weare],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.weare(java.util.Locale,org.springframework.ui.Model)

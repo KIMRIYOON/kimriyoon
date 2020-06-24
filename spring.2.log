@@ -1,11 +1,4 @@
-2020-06-22 10:42:31,336  INFO [kr.or.test.Log4jTest] test라는 매서드를 사용한 PC의 아이피는 : 192.168.56.1
-2020-06-22 10:42:31,336 DEBUG [kr.or.test.Log4jTest] 디버그!!MemberVO클래스 [이름은=홍길동, 나이는=24, 전화번호는=null]
-2020-06-22 10:42:31,336  INFO [kr.or.test.Log4jTest] 인포!!
-2020-06-22 10:42:31,336  WARN [kr.or.test.Log4jTest] 워닝!!
-2020-06-22 10:42:31,336 ERROR [kr.or.test.Log4jTest] 에러!!
-2020-06-22 10:42:31,336 FATAL [kr.or.test.Log4jTest] 파탈에러!!
-2020-06-22 10:42:55,578  WARN [org.apache.log4j.joran.action.PriorityAction] Priority element has been deprecated, please use <level> instead.
-2020-06-22 10:42:55,594  INFO [kr.or.test.Log4jTest] test라는 매서드를 사용한 PC의 아이피는 : 192.168.56.1
-2020-06-22 10:42:55,594 DEBUG [kr.or.test.Log4jTest] 디버그!!MemberVO클래스 [이름은=홍길동, 나이는=24, 전화번호는=null]
-2020-06-22 10:42:55,594  INFO [kr.or.test.Log4jTest] 인포!!
-2020-06-22 10:42:55,594  WARN [kr.or.test.Log4jTest] 워닝!!
+2020-06-24 17:10:20,241  INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] Mapped "{[/sample/htmltest],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.htmltest(java.util.Locale,org.springframework.ui.Model)
+2020-06-24 17:10:20,242  INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] Mapped "{[/sample/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.sample(java.util.Locale,org.springframework.ui.Model)
+2020-06-24 17:10:20,302  INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3cef309d: startup date [Wed Jun 24 17:10:19 KST 2020]; root of context hierarchy
+2020-06-24 17:10:20,333  INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3cef309d: startup date [Wed Jun 24 17:10:19 KST 2020]; root of context hierarchy
