@@ -28,7 +28,7 @@ public class MemberDAOImpl implements IF_MemberDAO {
 
 	@Override
 	public void updateMember(MemberVO memberVO) throws Exception {
-		sqlSession.update(mapperQuery + "updateMember", memberVO);
+		sqlSession.update(mapperQuery + ".updateMember", memberVO);
 		
 	}
 
