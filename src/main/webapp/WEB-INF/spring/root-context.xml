@@ -52,8 +52,8 @@
 				  value="jdbc:log4jdbc:mysql://127.0.0.1:3306/edu"></property>
 		<property name="username" value="root"></property>
 		<property name="password" value="apmsetup"></property>
-		</bean>-->
-		
+		</bean>
+		-->
 		<!--
 		DataSource 설정으로 JDBC 연결후, MyBatis와 MySql을 연동시킴. 
 		SqlSessionFactory : myBatis와 스프링의 Connection 생성.
