@@ -4,7 +4,7 @@
 <!-- tag library란 자바코드를 캡슐화하는 기술 등을 직접 만드는 기술을 말한다. -->
 <%@ include file="../include/header.jsp" %>
 
- 		<!-- Content Wrapper. Contains page content -->
+		<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper">
 			<!-- Content Header (Page header) -->
 			<div class="content-header">
@@ -29,59 +29,72 @@
 					<!-- general form elements disabled -->
 					<div class="card card-warning">
 						<div class="card-header">
-							<h3 class="card-title">READ Member</h3>
+							<h3 class="card-title">회원등록</h3>
 						</div>
 						<!-- /.card-header -->
 						<div class="card-body">
-							<form role="form">
+							<form role="form" action="/admin/member/write" method="post">
 								<div class="row">
 									<div class="col-sm-12">
 										<!-- text input -->
 										<div class="form-group">
-											<label>user_id</label> <br> ${memberVO.user_id}
+											<label>user_id</label> 
+											<input name="user_id" type="text" class="form-control"
+												placeholder="Enter user_id">
 										</div>
 									</div>
 
 									<div class="col-sm-12">
 										<!-- text input -->
 										<div class="form-group">
-											<label>user_name</label> <br> ${memberVO.user_name}
+											<label>user_pw</label> 
+											<input name="user_pw" type="text" class="form-control"
+												placeholder="Enter user_pw">
 										</div>
 									</div>
 
 									<div class="col-sm-12">
 										<!-- text input -->
 										<div class="form-group">
-											<label>email</label> <br> ${memberVO.email}
+											<label>user_name</label> 
+											<input name="user_name" type="text" class="form-control"
+												placeholder="Enter user_name">
 										</div>
 									</div>
 
 									<div class="col-sm-12">
 										<!-- text input -->
 										<div class="form-group">
-											<label>point</label> <br> ${memberVO.point}
+											<label>email</label> 
+											<input name="email" type="text" class="form-control"
+												placeholder="Enter email">
 										</div>
 									</div>
 										<div class="col-sm-12">
 										<div class="form-group">
-											<label>enabled</label> <br> ${memberVO.enabled}
-										</div>
-									</div>
-										<div class="col-sm-12">
-										<!-- text input -->
-										<div class="form-group">
-											<label>level</label> <br> ${memberVO.levels}
+											<label>point</label> 
+											<input name="point" type="text" class="form-control"
+												placeholder="0">
 										</div>
 									</div>
 									<div class="form-group">
-                       </div>
+                        <label>enabled</label>
+                        <select name="enabled" class="form-control">
+                          <option value="0">false</option>
+                          <option value="1" selected>true</option>
+                        </select>
+                        <label>level</label>
+                        <select name="levels" class="form-control">
+                          <option value="ROLE_USER">ROLE_USER</option>
+                          <option value="ROLE_ADMIN">ROLE_ADMIN</option>
+                        </select>
+                     <br>
                      <div class = "buttons">
-									<button type="submit" class="btn btn-warning">UPDATE</button>
-									<button type="submit" class="btn btn-danger">DELETE</button>
+									<button type="submit" class="btn btn-warning">Submit</button>
 									<a href="/admin/member/list" class="btn btn-primary">LIST ALL</a>
 								</div>
 								</div>
-								
+								</div>
 							</form>
 						</div>
 						<!-- /.content-header -->
@@ -102,7 +115,6 @@
 					<!-- /.control-sidebar -->
 				</div>
 			</div>
-		</div>
-		<!-- ./Contents Wrap -->
+		</div> 		
 
 <%@ include file="../include/footer.jsp" %>
