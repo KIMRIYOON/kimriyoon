@@ -94,7 +94,7 @@
               <li class="nav-item">
                 <a href="/admin/board/list" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>게시물관리</p>
+                  <p>게시판관리</p>
                 </a>
               </li>
             </ul>
