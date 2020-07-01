@@ -3,11 +3,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
 <!-- tag library란 자바코드를 캡슐화하는 기술 등을 직접 만드는 기술을 말한다. -->
 <%@ include file="../include/header.jsp" %>
-<script>
-if('${msg}' == "success"){
-	alert("수정에 성공하였습니다.");
-	}
-</script>
  		<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper">
 			<!-- Content Header (Page header) -->
@@ -37,7 +32,7 @@ if('${msg}' == "success"){
 						</div>
 						<!-- /.card-header -->
 						<div class="card-body">
-							<form role="form">
+							<form role="form" action="/admin/member/delete" method="post">
 								<div class="row">
 									<div class="col-sm-12">
 										<!-- text input -->
@@ -85,7 +80,7 @@ if('${msg}' == "success"){
 									<a href="/admin/member/list" class="btn btn-primary">LIST ALL</a>
 								</div>
 								</div>
-								
+							<input type="hidden" name="user_id" value="${memberVO.user_id}">
 							</form>
 						</div>
 						<!-- /.content-header -->
