@@ -9,6 +9,7 @@ import org.edu.dao.IF_MemberDAO;
 import org.edu.vo.BoardVO;
 import org.edu.vo.MemberVO;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class BoardServiceImpl implements IF_BoardService {
@@ -16,6 +17,7 @@ public class BoardServiceImpl implements IF_BoardService {
 	@Inject
 	private IF_BoardDAO boardDAO;
 
+	@Transactional
 	@Override
 	public void insertBoard(BoardVO boardVO) throws Exception {
 		boardDAO.insertBoard(boardVO);
@@ -38,8 +40,10 @@ public class BoardServiceImpl implements IF_BoardService {
 		
 	}
 
+	@Transactional
 	@Override
 	public void deleteBoard(Integer bno) throws Exception {
+		boardDAO.deleteAttach(bno);
 		boardDAO.deleteBoard(bno);
 		
 	}
@@ -47,6 +51,11 @@ public class BoardServiceImpl implements IF_BoardService {
 	@Override
 	public BoardVO viewBoard(Integer bno) throws Exception {
 		return boardDAO.viewBoard(bno);
+	}
+
+	@Override
+	public List<String> selectAttach(Integer bno) throws Exception {
+		return boardDAO.selectAttach(bno);
 	}
 
 	
