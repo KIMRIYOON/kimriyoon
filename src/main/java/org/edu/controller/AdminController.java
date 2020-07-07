@@ -9,16 +9,20 @@ import java.util.UUID;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
 import org.edu.service.IF_BoardService;
 import org.edu.service.IF_MemberService;
 import org.edu.vo.BoardVO;
 import org.edu.vo.MemberVO;
+import org.edu.vo.PageVO;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -72,11 +76,18 @@ public class AdminController {
 	 */
 	
 	@RequestMapping(value = "/admin/board/list", method = RequestMethod.GET)
-	public String boardList(Locale locale, Model model) throws Exception {
-		List<BoardVO> list = boardService.selectBoard();
+	public String boardList(@ModelAttribute("pageVO") PageVO pageVO, Locale locale, Model model) throws Exception {
+		//PageVO pageVO = new PageVO();//매개변수로 받기 전 테스트용
+		if(pageVO.getPage() == null) {//초기 page변수값 지정
+			pageVO.setPage(1);
+		}
+		pageVO.setPerPageNum(10);//1페이지당 보여줄 게시물 수 강제지정
+		pageVO.setTotalCount(boardService.countBno(pageVO));//강제로 이볅한 값을 쿼리로 대체OK.
+		List<BoardVO> list = boardService.selectBoard(pageVO);
 		//모델클래스로 jsp화면으로 boardService에서 셀렉트한 list값을 boardList라는 변수명으로 보낸다.
 		//model이라는 영역안에서 { list라는 변수를 -> boardList로 지정해서 -> jsp로 보낸다 }
 		model.addAttribute("boardList", list);
+		model.addAttribute("pageVO", pageVO);
 		return "admin/board/board_list";
 	}
 	/**
@@ -84,9 +95,9 @@ public class AdminController {
 	 * @throws Exception 
 	 */
 	@RequestMapping(value = "/admin/board/view", method = RequestMethod.GET)
-	public String boardView(@RequestParam("bno") Integer bno ,Locale locale, Model model) throws Exception {
+	public String boardView(@ModelAttribute("pageVO") PageVO pageVO, @RequestParam("bno") Integer bno ,Locale locale, Model model) throws Exception {
 		BoardVO boardVO = boardService.viewBoard(bno);
-		//여기서부터 첨부파일명
+		//여기서부터 첨부파일명 때문에 추가
 		List<String> files = boardService.selectAttach(bno);
 		String[] filenames = new String[files.size()];
 		int cnt = 0;
@@ -98,6 +109,7 @@ public class AdminController {
 		boardVO.setFiles(filenames);//String[]
 		//여기까지 첨부파일때문에 추가
 		model.addAttribute("boardVO", boardVO);
+		model.addAttribute("pageVO", pageVO);
 		return "admin/board/board_view";
 	}
 	/**
@@ -111,7 +123,7 @@ public class AdminController {
 		
 	}
 	@RequestMapping(value = "/admin/board/write", method = RequestMethod.POST)
-	public String boardWrite(MultipartFile file, BoardVO boardVO, Locale locale, RedirectAttributes rdat) throws Exception {
+	public String boardWrite(MultipartFile file, @Valid BoardVO boardVO, Locale locale, RedirectAttributes rdat) throws Exception {
 		//System.out.println("====첨부파일 없이 저장====" + file.getOriginalFilename()
 		if(file.getOriginalFilename() == "" ) {
 			//첨부파일 없이 저장
@@ -130,13 +142,14 @@ public class AdminController {
 	 * @throws Exception 
 	 */
 	@RequestMapping(value = "/admin/board/update", method = RequestMethod.GET)
-	public String boardUpdate(@RequestParam("bno") Integer bno, Locale locale, Model model) throws Exception {
+	public String boardUpdate(@ModelAttribute("pageVO") PageVO pageVO, @RequestParam("bno") Integer bno, Locale locale, Model model) throws Exception {
 		BoardVO boardVO = boardService.viewBoard(bno);
 		model.addAttribute("boardVO", boardVO);
+		model.addAttribute("pageVO", pageVO);
 		return "admin/board/board_update";
 	}
 	@RequestMapping(value = "/admin/board/update", method = RequestMethod.POST)
-	public String boardUpdate(MultipartFile file, BoardVO boardVO, Locale locale, RedirectAttributes rdat) throws Exception {
+	public String boardUpdate(@ModelAttribute("pageVO") PageVO pageVO, MultipartFile file, @Valid BoardVO boardVO, Locale locale, RedirectAttributes rdat) throws Exception {
 		if(file.getOriginalFilename() == "") {
 			boardService.updateBoard(boardVO);
 		}else {
@@ -157,7 +170,7 @@ public class AdminController {
 			
 		}//End if
 		rdat.addFlashAttribute("msg", "수정");
-		return "redirect:/admin/board/view?bno=" + boardVO.getBno();
+		return "redirect:/admin/board/view?bno=" + boardVO.getBno() + "&page=" + pageVO.getPage();
 		
 	}
 	

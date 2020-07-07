@@ -22,6 +22,7 @@
       </div><!-- /.container-fluid -->
       </div><!-- content-header -->
    	  <div class="content">
+   	  <p><a href='<c:out value="${prevPage}"/>'>이전페이지로 가기</a>
    	  <p>에러 상세내역</p>
       <ul>
       <c:forEach items="${exception.getStackTrace()}" var="stack">
