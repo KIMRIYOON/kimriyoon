@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
 <%@ include file="include/header.jsp" %>
 
   <!-- Content Wrapper. Contains page content -->
@@ -21,6 +20,15 @@
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-   </div>
+    <!-- /.content-header -->
 
-<%@ include file="include/footer.jsp" %>
+    <!-- Main content -->
+    <div class="content">
+    
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
+<%@ include file="include/footer.jsp" %> 

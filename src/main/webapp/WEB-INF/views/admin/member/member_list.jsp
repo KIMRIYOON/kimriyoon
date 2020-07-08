@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
 <!-- tag library란 자바코드를 캡슐화하는 기술 등을 직접 만드는 기술을 말한다. -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ include file="../include/header.jsp" %>
 
  <!-- Content Wrapper. Contains page content -->
@@ -26,29 +27,25 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">멤버 검색</h3>
-                </div>
-                </div>
-                </div>
-                <div class="col-1" style="display:inline-block" >
-                        <select class="form-control">
-                          <option>--</option>
-                        </select>
-                        </div>
-                        <div class="search" style="display:inline">
-     <input type="text" placeholder="">
-<div class="button" style="display:inline">
-     <button>검색</button>
-</div>
-<div class="button" style="display:inline">
-     <button>새사용자등록</button>
+              </div>
+            </div>
      </div>
-                        </div>
-    
+     <form action="/admin/member/list">
+          <div class="col-3" style="display:inline-block" >
+           <select name="searchType" class="form-control">
+             <option value="all">전체</option>
+           </select>
+          </div>
+          <div class="search" style="display:inline">
+     	     <input type="text" name="searchKeyword" placeholder="">
+			 <div class="button" style="display:inline">
+		    	 <button>검색</button>
+			 </div>
+          </div>
+     </form>
 </div>
-    
-    
-    
-        <div class="col-12">
+
+            <div class="col-12">
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">LIST ALL PAGE</h3>
@@ -80,10 +77,10 @@
                     <c:forEach items = "${memberList}" var="memberVO" varStatus="status">
                     <tr>
                       <td>${memberVO.user_id}</td>
-                      <td><a href="/admin/member/view?user_id=${memberVO.user_id}">${memberVO.user_name}</a></td>
+                      <td><a href="/admin/member/view?user_id=${memberVO.user_id}&page=${pageVO.page}">${memberVO.user_name}[${memberVO.point}]</a></td>
                       <td>${memberVO.email}</td>
                       <td><span class="tag tag-success">${memberVO.enabled}</span></td>
-                      <td>${memberVO.reg_date}</td>
+                      <fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${memberVO.reg_date}"/>
                       <td><small class="badge badge-danger">${memberVO.levels}</small></td>
                     </tr>
                     </c:forEach>
@@ -91,11 +88,23 @@
             <td> <a href="/admin/member/write" class="btn btn-primary">CREATE</a>
                </td>
            <td>
-              <nav aria-label="Contacts Page Navigation">
-            <ul class="pagination justify-content-center m-0">
-              <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            </ul>
-       		  </nav>
+           <nav aria-label="Contacts Page Navigation">
+	            <ul class="pagination" style="position:relative;left:40%;">
+	            <c:if test="${pageVO.prev}">
+	           	<li class="page-item">
+	            	<a class="page-link" href="/admin/member/list?page=${pageVO.startPage - 1}&searchType=${pageVO.searchType}&searchKeyword=${pageVO.searchKeyword}">이전</a>
+	            </li>
+	            </c:if>
+	            <c:forEach begin = "${pageVO.startPage}" end="${pageVO.endPage}" var="idx">
+	                <li class='page-item <c:out value="${idx==pageVO.page?'active':''}"/>'><a href="/admin/member/list?page=${idx}&searchType=${pageVO.searchType}&searchKeyword=${pageVO.searchKeyword}" class="page-link">${idx}</a></li>
+	            </c:forEach>
+	            <c:if test="${pageVO.next}">
+	           	<li class="page-item">
+	            	<a class="page-link" href="/admin/member/list?page=${pageVO.endPage + 1}&searchType=${pageVO.searchType}&searchKeyword=${pageVO.searchKeyword}">다음</a>
+	            </li>
+	            </c:if>
+	            </ul>
+          </nav>
            </td>
           </table>
          </div>
