@@ -19,6 +19,7 @@ import org.edu.vo.BoardVO;
 import org.edu.vo.MemberVO;
 import org.edu.vo.PageVO;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
@@ -238,6 +239,13 @@ public class AdminController {
 	}
 	@RequestMapping(value = "/admin/member/write", method = RequestMethod.POST)
 	public String memberWrite(@Valid MemberVO memberVO, Locale locale, RedirectAttributes rdat) throws Exception {
+		String new_pw = memberVO.getUser_pw();//ex)1234
+		if(new_pw !="") {
+			//스프링시큐리티 4.x BCryptPasswordEncoder 암호 사용
+			BCryptPasswordEncoder bcryptPasswordEncoder = new BCryptPasswordEncoder(10);
+			String bcryptPassword = bcryptPasswordEncoder.encode(new_pw);
+			memberVO.setUser_pw(bcryptPassword);//DB에 들어가기전에 값을 set시키는 것.
+		}
 		memberService .insertMember(memberVO);
 		rdat.addFlashAttribute("msg", "입력");
 		return "redirect:/admin/member/list";
@@ -256,6 +264,13 @@ public class AdminController {
 	}
 	@RequestMapping(value = "/admin/member/update", method = RequestMethod.POST)
 	public String memberUpdate(@ModelAttribute("pageVO") PageVO pageVO, MemberVO memberVO, Locale locale, RedirectAttributes rdat) throws Exception {
+		String new_pw = memberVO.getUser_pw();//ex)1234
+		if(new_pw !="") {
+			//스프링시큐리티 4.x BCryptPasswordEncoder 암호 사용
+			BCryptPasswordEncoder bcryptPasswordEncoder = new BCryptPasswordEncoder(10);
+			String bcryptPassword = bcryptPasswordEncoder.encode(new_pw);
+			memberVO.setUser_pw(bcryptPassword);//DB에 들어가기전에 값을 set시키는 것.
+		}
 		memberService.updateMember(memberVO);
 		rdat.addFlashAttribute("msg","수정");
 		return "redirect:/admin/member/view?user_id=" + memberVO.getUser_id() + "&page=" + pageVO.getPage();
