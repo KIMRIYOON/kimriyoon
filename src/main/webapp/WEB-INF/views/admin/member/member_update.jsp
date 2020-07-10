@@ -1,10 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
-<!-- tag library란 자바코드를 캡슐화하는 기술 등을 직접 만드는 기술을 말한다. -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ include file="../include/header.jsp" %>
 
-		<!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper">
 			<!-- Content Header (Page header) -->
 			<div class="content-header">
@@ -38,8 +37,8 @@
 									<div class="col-sm-12">
 										<!-- text input -->
 										<div class="form-group">
-											<label>user_id</label> 
-											<br>${memberVO.user_id}
+											<label>user_id</label>
+											<br>${memberVO.user_id} 
 											<input value="${memberVO.user_id}" name="user_id" type="hidden" class="form-control"
 												placeholder="Enter user_id">
 										</div>
@@ -81,10 +80,14 @@
 									<div class="form-group">
                         <label>enabled</label>
                         <select name="enabled" class="form-control">
-                          <option value="0" <c:out value="${memberVO.enabled eq 'false'?'selected':''}" />
-                          >false</option>
-                          <option value="1" <c:out value="${memberVO.enabled eq 'true'?'seleted':''}" />
-                          >true</option>
+<option value="0" <c:out value="${(memberVO.enabled eq 'false')?('selected'):('')}" />
+>
+false
+</option>
+<option value="1" <c:out value="${(memberVO.enabled eq 'true')?('selected'):('') }" />
+>
+                          true
+                          </option>
                         </select>
                         <label>level</label>
                         <select name="levels" class="form-control">
@@ -102,16 +105,19 @@
 								</div>
 								</div>
 								</div>
-								<input type="hidden" name="page" value="${pageVO.page}">
+								<input type="hidden" name="page" value="${pageVO.page}" >
 							</form>
 						</div>
 						<!-- /.content-header -->
+
 						<!-- Main content -->
 						<div class="content"></div>
 						<!-- .content  -->
 					</div>
+					
 				</div>
 			</div>
-		</div> 		
+		</div>
+		<!-- ./Content Wrapper -->
 
-<%@ include file="../include/footer.jsp" %>
+<%@ include file="../include/footer.jsp" %> 
