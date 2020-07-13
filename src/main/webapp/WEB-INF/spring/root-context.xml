@@ -19,15 +19,15 @@
 	<!-- HSQLDB FILE 사용 헤로쿠에 올릴때 경로는 /tmp/embeded/edu.db , 로컬PC일때 경로는 c:/egov/workspace/embeded/edu.db  --> 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
 		<property name="driverClassName" value="org.hsqldb.jdbcDriver" />
-		<property name="url" value="jdbc:hsqldb:file:c:/tmp/embeded/edu.db" />
+		<property name="url" value="jdbc:hsqldb:file:c:/egov/workspace/embeded/edu.db" />
 		<property name="username" value="sa" />
 		<property name="password" value="" />
 	</bean> 
-	<!-- CREATE TABLE 초기 1회만 실행 -->
+	<!-- CREATE TABLE 초기 1회만 실행 
 	<jdbc:initialize-database data-source="dataSource" ignore-failures="DROPS"> 
 		<jdbc:script location="classpath:/db/embeded_edu_dummy.sql" /> 
 	</jdbc:initialize-database>
-	
+	-->
 	<!-- hsql 메모리 DB용
     <jdbc:embedded-database id="dataSource" type="HSQL">
 		<jdbc:script location= "classpath:/db/edu_hsql.sql"/>
@@ -88,11 +88,6 @@
 	 	
 	</bean>
 	
-	<context:component-scan base-package="org.edu.aop"></context:component-scan>
-	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
-	<aop:config></aop:config>
-	
-
 	 <!-- 
 		...133, 176p.MyBatis에서 DAO를 이용하는 경우, SqlSessionTemplate라는 것을 이용해서 DAO를 구현함.
 		mybatis-spring에서 제공하는 SqlSessionTempalte객체는 기본적인 트랜잭션 관리나 쓰레드 처리의
@@ -106,6 +101,10 @@
 	</bean>
      <context:component-scan base-package="org.edu.dao"/>
 	 <context:component-scan base-package="org.edu.service"/>
+	 
+	 <context:component-scan base-package="org.edu.aop"></context:component-scan>
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	<aop:config></aop:config>
 	 <!-- 대표적으로 게시판 입력 트랜잭션에서 이용 -->
 	 <bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

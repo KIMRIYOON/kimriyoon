@@ -125,7 +125,7 @@ hr {display:none;}
 .box_inner {margin:0 auto;}
 
 /* header */
-header {position:absolute; left:0; top:0; width:100%; height:113px; background:rgba(0,0,0,0.5); z-index:100;}
+header {position:absolute; left:0; top:0; width:100%; height:113px; background:#F29661; z-index:100;} 
 header .header_area {/*position:relative;*/}
 header .header_area h1 {float:left; padding:25px 0 0;}
 header .header_area h1 a {display:block; width:270px; height:71px; text-indent:-9999px; overflow:hidden; background:url(../img/main_logo.png) no-repeat;}

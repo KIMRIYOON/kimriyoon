@@ -15,6 +15,7 @@ import javax.validation.Valid;
 
 import org.edu.service.IF_BoardService;
 import org.edu.service.IF_MemberService;
+import org.edu.util.FileDataUtil;
 import org.edu.vo.BoardVO;
 import org.edu.vo.MemberVO;
 import org.edu.vo.PageVO;
@@ -40,37 +41,9 @@ public class AdminController {
 	@Inject 
 	private IF_MemberService memberService;
 	
-	//첨부파일 업로드 경로를 변수값으로 가져옴(servlet-context.xml에서)
-	@Resource(name="uploadPath")
-	private String uploadPath;
-	
-	/**
-	 * 게시물 상세보기에서 첨부파일 다운로드 메서드 구현
-	 */
-	@RequestMapping(value="/download", method=RequestMethod.GET)
-	@ResponseBody
-	public FileSystemResource fileDownload(@RequestParam("filename")String fileName, HttpServletResponse response) {
-		File file = new File(uploadPath + "/" + fileName);
-		response.setContentType("application/download; utf-8");
-		response.setHeader("content-disposition", "attachment; filename="+fileName);
-		return new FileSystemResource(file);
-	}
-	
-	/**
-	 * 파일 업로드 메서드(공통)
-	 * @throws IOException 
-	 */
-	public String[] fileUpload(MultipartFile file) throws IOException {
-		String originalName = file.getOriginalFilename();//jsp에서 전송받은 파일의 이름을 가져옴.
-		UUID uid = UUID.randomUUID(); //랜덤문자 구하기
-		String saveName = uid.toString() + "." + originalName.split("\\.")[1]; //한글 파일명 처리때문에 
-		String[] files = new String[] {saveName}; //중괄호로 배열로 선언해서 String값을 채워서 형변환 (getset쓰려고)
-		byte[] fileData = file.getBytes();
-		File target = new File(uploadPath, saveName);
-		FileCopyUtils.copy(fileData, target);
-		return files;
-	}
-	
+	@Inject
+	private FileDataUtil fileDataUtil;
+		
 	/**
 	 * 게시물관리 리스트 입니다.
 	 * @throws Exception 
@@ -130,7 +103,7 @@ public class AdminController {
 			//첨부파일 없이 저장
 			boardService.insertBoard(boardVO);
 		}else {
-			String[] files = fileUpload(file);
+			String[] files = fileDataUtil.fileUpload(file);
 			boardVO.setFiles(files);
 			boardService.insertBoard(boardVO);
 		}
@@ -159,13 +132,13 @@ public class AdminController {
 			String[] filenames = new String[delFiles.size()];
 			for(String fileName : delFiles) {
 				//실제파일 삭제(아래)
-				File target = new File(uploadPath, fileName);
+				File target = new File(fileDataUtil.getUploadPath(), fileName);
 				if(target.exists()) { //조건:해당경로에 파일명이 존재하면
 					target.delete(); //파일삭제
 				}
 			}//End for
 			//아래에서부터 신규 파일 업로드
-			String[] files = fileUpload(file);		
+			String[] files = fileDataUtil.fileUpload(file);		
  			boardVO.setFiles(files);//데이터베이스 <-> VO(get,set) <-> DAO클래스
 			boardService.updateBoard(boardVO);
 			
@@ -188,7 +161,7 @@ public class AdminController {
 		//첨부파일 삭제(아래)
 		for(String fileName : files) {
 			//삭제 명령문 추가(아래)
-			File target = new File(uploadPath, fileName);
+			File target = new File(fileDataUtil.getUploadPath(), fileName);
 			if(target.exists()) {
 				target.delete();
 			}
