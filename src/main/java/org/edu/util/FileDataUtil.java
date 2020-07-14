@@ -2,6 +2,7 @@ package org.edu.util;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.UUID;
 
 import javax.annotation.Resource;
@@ -18,9 +19,19 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class FileDataUtil {
+	
+	private ArrayList<String> extNameArray = new ArrayList<String>() 
+	{
+		{
+			add("gif");
+			add("jpg");
+			add("png");
+		}
+	};
+	
 	//첨부파일 업로드 경로를 변수값으로 가져옴(servlet-context.xml에서)
-		@Resource(name="uploadPath")
-		private String uploadPath;
+	@Resource(name="uploadPath")
+	private String uploadPath;
 	
 	public String getUploadPath() {
 			return uploadPath;
@@ -52,5 +63,11 @@ public class FileDataUtil {
 		File target = new File(uploadPath, saveName);
 		FileCopyUtils.copy(fileData, target);
 		return files;
+	}
+	public ArrayList<String> getExtNameArray() {
+		return extNameArray;
+	}
+	public void setExtNameArray(ArrayList<String> extNameArray) {
+		this.extNameArray = extNameArray;
 	}
 }
