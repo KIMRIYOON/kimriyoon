@@ -166,7 +166,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
-                <table class="table table-hover text-nowrap">
+                <table class="table table-hover text-nowrap even_table">
                   <thead>
                     <tr>
                       <th>BNO</th>
@@ -176,7 +176,7 @@
                       <th>VIEWCNT</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody class ="even_color">
                     <tr>
                       <td>130</td>
                       <td>홈페이지 오픈 테스트</td>
@@ -204,17 +204,21 @@
                       <td>user00</td>
                       <td><span class="tag tag-danger">2019-10-19 08:58</span></td>
                       <td><span class="badge badge-danger right">0</span></td>
-                      </tr>
+                     </tr>
                   </tbody>
-            <td> <button type="submit" class="btn btn-primary">CREATE</button>
+                 </table>
+                 <table class="table table-hover text-nowrap">
+                 <tr>
+           		<td> <button type="submit" class="btn btn-primary">CREATE</button>
                </td>
-           <td>
+        	  <td>
               <nav aria-label="Contacts Page Navigation">
-            <ul class="pagination justify-content-center m-0">
-              <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            </ul>
-          </nav>
+          		 <ul class="pagination justify-content-center m-0">
+            	  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+         		  </ul>
+        	  </nav>
                </td>
+               </tr>
                 </table>
               </div>
               <!-- /.card-body -->
@@ -224,8 +228,7 @@
  
     
     </div>
-    <!-- Content Wrapper. Contains page content -->
-
+  <!-- ./Content Wrapper. Contains page content -->
 
   <!-- Main content -->  
 	<div class="content">
@@ -267,26 +270,31 @@
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
 <script>
-//=========고전적인 자바스크립트 방식===============//
-function myFunc() {//function 함수이름() {}
-	   alert('테스트');
-	}
-myFunc();//함수호출==실행
-$(document).ready(function(){ //함수명 없이 실행 == 콜백함수.
+//=========고전적인 자바스크립트 방식 ============//
+function myFunc() {//function 함수이름() { }
+	alert('테스트');
+}
+myFunc();//함수호출(콜)==실행
+//========JQuery 스크립트 방식 =========//
+$(document).ready(function(){//함수명 없이 실행 == 콜백함수.
 	alert('테스트2');
+	$(".even_table tbody tr:even").css({"background-color":"black","color":"white"});
 	var cnt = 131;
 	$(".btn-primary").bind("click",function(event){
-		$("<tr><td>"+cnt+"</td><td>한줄추가</td><td>내용추가</td><td>2020.07.15</td><td>100</td></tr>").prependTo("table");
-		cnt = cnt + 1;
+		$(".even_table tbody tr").each(function(index,item){
+			$(item).addClass("kim_" + index); //class="kim_0","kim_1"
+		})
+		//$("<tr><td>"+cnt+"</td><td>한줄추가</td><td>내용추가</td><td>2020.07.15</td><td>100</td></tr>").prependTo(".even_table tbody");
+		//cnt = cnt + 1;
 	});
-	$("table thead tr").css({"background-color":"green"});
-	//$("#searchType").css({"width":"150px"}); //제이쿼리 JS
+	//$("table thead tr").css({"background-color":"red"});
+	//$("#searchType").css({"width":"150px"});//제이쿼리 JS
 	//document.getElementById("searchType").style.width="200px";//오리지널 JS
 	//$(".btn-primary").css({"background-color":"red"});
 	//$("tr").css("background-color","red");
-	//$("tr").css({"background-color":"red","color":"blue"});//배열로 사용. 값은:로 배열 사이는,로 구분
+	//$("tr").css({"background-color":"red","color":"blue"});
 });
-//==============================================//
+//=====================//
 </script>
 
 </body>
