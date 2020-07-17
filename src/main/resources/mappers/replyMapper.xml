@@ -22,7 +22,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	<insert id="insertReply">
 		insert into tbl_reply (
-			bno, replytext, replyer, ragdate
+			bno, replytext, replyer, regdate
 		) values (
 			#{bno}, #{replytext}, #{replyer}, now()
 		)	
