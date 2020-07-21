@@ -32,17 +32,17 @@ public class PageVO {
 
 	private void calcPage() {
 		//page변수는 현재 jsp에서 클릭한 페이지번호
-		int tempEnd = (int)(Math.ceil(page / 10.0)*10); //jsp에서 클릭한 페이지를 기준으로 끝페이지를 계산
+		int tempEnd = (int)(Math.ceil(page /(double)this.perPageNum)*this.perPageNum); //jsp에서 클릭한 페이지를 기준으로 끝페이지를 계산
 		//ceil함수는 천장함수로 1.1 = 2, 2.1 = 3으로 출력된다.
 		//반대되는 것은 바닥함수 floor(), 반올림함수로 round()가 있다.
-		this.startPage = tempEnd - 9; //시작페이지 계산
-		if(tempEnd * 10 > this.totalCount) { //클릭한 page번호로 계산된 게시물수가 실제 게시물개수 totalCount보다 클때
-			this.endPage = (int)Math.ceil(this.totalCount/10.0);
+		this.startPage = (tempEnd - this.perPageNum)+1; //시작페이지 계산
+		if(tempEnd * this.perPageNum > this.totalCount) { //클릭한 page번호로 계산된 게시물수가 실제 게시물개수 totalCount보다 클때
+			this.endPage = (int)Math.ceil(this.totalCount/(double)this.perPageNum);
 		}else { //클릭한 page번호로 계산된 게시물수가 실제 게시물개수인 totalCount보다 작을때
 			this.endPage = tempEnd;
 		}
 		this.prev = this.startPage != 1; //시작페이지가 1보다 크면 무조건 이전페이지가 있다.
-		this.next = this.endPage * 10 < this.totalCount; //클릭한 page번호로 계산된 게시물 수가 실제 게시물 수보다 작다면 다음페이지가 있음. true
+		this.next = this.endPage * this.perPageNum < this.totalCount; //클릭한 page번호로 계산된 게시물 수가 실제 게시물 수보다 작다면 다음페이지가 있음. true
 	}
 	
 	public int getTotalCount() {
