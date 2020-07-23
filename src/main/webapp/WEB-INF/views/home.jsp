@@ -22,7 +22,7 @@
                             <img src="/resources/home/img/hogdog2.png" alt="OOOO OOOOOOOOO OOOOO 스프링정보, 스프링... OOOO OOOOO?"></a>
                             <p class="roll_txtline"><b>사진</b></p>
                         </div>
-                    </li>
+                    </li> 
                     <li class="imglist2">
                         <div class="roll_content">
                             <a href="/resources/home/javascript:;">
