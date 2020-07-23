@@ -48,26 +48,26 @@ if('${msg}' != ""){
 						</c:if>
 					</c:when>
 					<c:otherwise>
-						<li><a href="/login">로그인</a></li>
-						<li><a href="#">회원가입</a></li>
+						<li><a href="/login"><b>로그인</b></a></li>
+						<li><a href="#"><b>회원가입</b></a></li>
 					</c:otherwise>
 				</c:choose>
 				</ul>	
 				<nav>
 				<ul class="gnb clear">
-					<li><a href="/smaple" class="openAll1">포트폴리오</a>
+					<li><a href="/smaple" class="openAll1"><b>포트폴리오</b></a>
 
                         <div class="gnb_depth gnb_depth2_1">
                             <ul class="submenu_list">
-                                <li><a href="/sample">원페이지</a></li>
-                                <li><a href="/sample/slide">슬라이드</a></li>
+                                <li><a href="/sample"><b>원페이지</b></a></li>
+                                <li><a href="/sample/slide"><b>슬라이드</b></a></li>
                             </ul>
                         </div>
 					</li>
-					<li><a href="/board/list" class="openAll2">고객센터</a>
+					<li><a href="/board/list" class="openAll2"><b>고객센터</b></a>
 				        <div class="gnb_depth gnb_depth2_2">
                             <ul class="submenu_list">
-                                <li><a href="/board/list">공지사항</a></li>
+                                <li><a href="/board/list"><b>공지사항</b></a></li>
                             </ul>
                         </div>
 					</li>

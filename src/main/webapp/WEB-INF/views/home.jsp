@@ -12,22 +12,22 @@
                     <li class="imglist0">
                         <div class="roll_content">
                             <a href="/resources/home/javascript:;">
-                            <img src="/resources/home/img/img_slidecontents01.png" alt="OOOO OOOOO OOOO OOOOO, 스프링... OOOO OOOOO?"></a>
-                            <p class="roll_txtline">OOOO OOOOOOOOO OOOOOOOOO OOOOO</p>
+                            <img src="/resources/home/img/hotdog1.png"></a>
+                            <p class="roll_txtline"><b>핫도그</b></p>
                         </div>
                     </li>
                     <li class="imglist1">
                         <div class="roll_content">
                             <a href="/resources/home/javascript:;">
-                            <img src="/resources/home/img/img_slidecontents02.png" alt="OOOO OOOOOOOOO OOOOO 스프링정보, 스프링... OOOO OOOOO?"></a>
-                            <p class="roll_txtline">OOOO OOOOOOOOO OOOOOOOOO OOOOO</p>
+                            <img src="/resources/home/img/hogdog2.png" alt="OOOO OOOOOOOOO OOOOO 스프링정보, 스프링... OOOO OOOOO?"></a>
+                            <p class="roll_txtline"><b>사진</b></p>
                         </div>
                     </li>
                     <li class="imglist2">
                         <div class="roll_content">
                             <a href="/resources/home/javascript:;">
-                            <img src="/resources/home/img/img_slidecontents03.png" alt="OOOO OOOOO 믿을 수 있는 스프링정보, 스프링... OOOO OOOOO?"></a>
-                            <p class="roll_txtline">OOOO OOOOOOOOO OOOOOOOOO OOOOO</p>
+                            <img src="/resources/home/img/hotdog3.png" alt="OOOO OOOOO 믿을 수 있는 스프링정보, 스프링... OOOO OOOOO?"></a>
+                            <p class="roll_txtline"><b>잘나오나</b></p>
                         </div>
                     </li>
                 </ul>
