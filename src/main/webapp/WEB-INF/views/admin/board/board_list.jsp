@@ -86,7 +86,7 @@
             <td> <a href="/admin/board/write" class="btn btn-primary">CREATE</a>
                </td>
            <td>
-              <nav aria-label="Contacts Page Navigation">
+           <nav aria-label="Contacts Page Navigation">
             <ul class="pagination" style="position:relative;left:40%;">
             <c:if test="${pageVO.prev}">
            	<li class="page-item">
