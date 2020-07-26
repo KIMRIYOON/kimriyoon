@@ -55,8 +55,23 @@ if('${msg}' != ""){
 				</ul>	
 				<nav>
 				<ul class="gnb clear">
+					<li><a href="#" class="openAll3"><b>회사소개</b></a>
+                        <div class="gnb_depth gnb_depth2_3">
+                            <ul class="submenu_list">
+                                <li><a href="#"><b>기업연혁</b></a></li>
+                                <li><a href="#"><b>오시는길</b></a></li>
+                            </ul>
+                        </div>
+					</li>
+					<li><a href="#" class="openAll4"><b>창업문의</b></a>
+                        <div class="gnb_depth gnb_depth2_4">
+                            <ul class="submenu_list">
+                                <li><a href="#"><b>온라인신청</b></a></li>
+                                <li><a href="#"><b>오프라인상담</b></a></li>
+                            </ul>
+                        </div>
+					</li>
 					<li><a href="/smaple" class="openAll1"><b>포트폴리오</b></a>
-
                         <div class="gnb_depth gnb_depth2_1">
                             <ul class="submenu_list">
                                 <li><a href="/sample"><b>원페이지</b></a></li>
@@ -68,6 +83,13 @@ if('${msg}' != ""){
 				        <div class="gnb_depth gnb_depth2_2">
                             <ul class="submenu_list">
                                 <li><a href="/board/list"><b>공지사항</b></a></li>
+                            </ul>
+                        </div>
+					</li>
+				<li><a href="#" class="openAll5"><b>Q&A</b></a>
+                        <div class="gnb_depth gnb_depth2_5">
+                            <ul class="submenu_list">
+                                <li><a href="#"><b>궁금해요</b></a></li>
                             </ul>
                         </div>
 					</li>
