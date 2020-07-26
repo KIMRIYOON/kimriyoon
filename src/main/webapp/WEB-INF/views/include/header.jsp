@@ -33,7 +33,7 @@ if('${msg}' != ""){
 <div id="wrap">
 
 	<header id="header">
-		<div class="header_area box_inner clear">	
+		<div class="header_area box_inner clear" color:>	
 			<h1><a href="/">사용자홈페이지</a></h1>
 			<p class="openMOgnb"><a href="#" onclick="return false"><b class="hdd">메뉴열기</b> <span></span><span></span><span></span></a></p>
 			<!-- header_cont -->

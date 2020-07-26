@@ -124,13 +124,13 @@ hr {display:none;}
 
 /* layout */
 #wrap {}
-.box_inner {margin:0 auto; background-color:#fb0e0e;}
+.box_inner {margin:0 auto; background-color:#252527;;}
 
 /* header */
 header {position:absolute; left:0; top:0; width:100%; height:113px; background-color:#f9f93f; z-index:100;} 
-header .header_area {/*position:static;*/}
+header .header_area {/*position:static;*/ background-color:#a51919;}
 header .header_area h1 {float:left; padding:25px 0 0;}
-header .header_area h1 a {display:block; width:270px; height:71px; text-indent:-9999px; overflow:hidden; background:url(../img/main_logo.png) no-repeat;}
+header .header_area h1 a {display:block; width:270px; height:71px; text-indent:-9999px; overflow:hidden; background:url(../img/main_logo.png) no-repeat; margin-bottom:12px;}
 header .header_area .openMOgnb {display:none;}
 .header_cont {float:right; width:780px;padding-right:10px;} 
 .header_cont .util {text-align: right; padding-top:10px;} 
@@ -209,7 +209,7 @@ footer .foot_area .snslink li + li + li a {background-image:url(../img/ico_insta
 /* app_area */
 .appbbs_area {padding:60px 0; background-color:#252527;}
 .appbbs_area .appbbs_box {}
-.appbbs_box .app_line {float:left; width:66%; box-sizing:border-box; padding:45px 0; text-align:center; background:url(../img/bg_app.jpg) repeat; font-size:0;}
+.appbbs_box .app_line {float:left; width:66%; box-sizing:border-box; padding:45px 0; text-align:center; font-size:0;}
 .appbbs_box .app_line a {display:inline-block; width:42.4%; height:100px; line-height:100px; box-sizing:border-box; padding-left:75px; text-align:left; background:rgba(0,0,0,0.3) url(../img/ico_katalk.png) no-repeat 20px 50%; border:2px solid #fff; margin-right:10px; font-size:26px; color:#fff; vertical-align:middle;}
 .appbbs_box .app_line a + a {margin-right:0; padding-left:85px;background-image:url(../img/ico_phone.png);}
 .appbbs_box .bbs_line {float:right; width:30%;}
@@ -245,12 +245,12 @@ footer .foot_area .snslink li + li + li a {background-image:url(../img/ico_insta
 .pop_content .pop_list li .pop_txt p {padding-top:10px; line-height:1.8; font-size:17px; width:95%; margin:0 auto; overflow:hidden; word-break:keep-all; letter-spacing:-2px;}
 
 /* sub_page */
-.location_area {height:445px; background:#0068d1;}
+.location_area {height:445px; background:#252627;}
 .location_area.about {}
-.location_area.customer {background:#0068d1;}
-.location_area.package {background:#0068d1;}
-.location_area.ticket {background:#0068d1;}
-.location_area.member {background:#0068d1;}
+.location_area.customer {background:#252627;}
+.location_area.package {background:#252627;}
+.location_area.ticket {background:#252627;}
+.location_area.member {background:#252627;}
 .location_area h2.tit_page {padding:250px 0 0 0; margin:0 50px; border-bottom:1px solid #ccc; font:30px "Arial Narrow"; color:#fff; letter-spacing:3px;}
 .location_area h2.tit_page .in {font-variant: small-caps;}
 .location_area p.location {padding:20px 0 0 50px; color:#fff;}
@@ -391,9 +391,9 @@ h1.loginTit a img {width:100%;}
 
 	.box_inner {width:100%;}
 
-	header {height:90px; text-align:center; z-index:200; background:rgba(0,0,0,0.5);}
+	header {height:; text-align:center; z-index:200; background:yellow;}
 	header.on {background:#31353d;}
-	header .header_area h1 {float:none; width:100%; height:50px; text-align:center; padding:3px 0 0;}
+	header .header_area h1 {float:none; width:100%; height:100px; text-align:center; padding:3px 0 0; background:red;}
 	header .header_area h1 a {display:inline-block; width:150px; height:83px; background-size:270px 83px;}
 	header .header_area .openMOgnb {display:block; position:absolute; left:15px; top:35px; width:23px; height:16px;}
 	header .header_area .openMOgnb span {box-sizing:border-box; display:block; width:25px; height:3px; margin-bottom:4px; border-radius:10px; background:#fff;}

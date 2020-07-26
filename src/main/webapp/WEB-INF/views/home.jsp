@@ -12,22 +12,22 @@
                     <li class="imglist0">
                         <div class="roll_content">
                             <a href="/resources/home/javascript:;">
-                            <img src="/resources/home/img/hotdog1.png"></a>
-                            <p class="roll_txtline"><b>핫도그</b></p>
+                            <img src="/resources/home/img/hotdog1.png" width="1100" height="500"></a>
+                            <p class="roll_txtline"><b></b></p>
                         </div>
                     </li>
                     <li class="imglist1">
                         <div class="roll_content">
                             <a href="/resources/home/javascript:;">
-                            <img src="/resources/home/img/hogdog2.png" alt="OOOO OOOOOOOOO OOOOO 스프링정보, 스프링... OOOO OOOOO?"></a>
-                            <p class="roll_txtline"><b>사진</b></p>
+                            <img src="/resources/home/img/hogdog2.png" width="1100" height="500"></a>
+                            <p class="roll_txtline"><b></b></p>
                         </div>
                     </li> 
                     <li class="imglist2">
                         <div class="roll_content">
                             <a href="/resources/home/javascript:;">
-                            <img src="/resources/home/img/hotdog3.png" alt="OOOO OOOOO 믿을 수 있는 스프링정보, 스프링... OOOO OOOOO?"></a>
-                            <p class="roll_txtline"><b>잘나오나</b></p>
+                            <img src="/resources/home/img/hotdog3.png" width="1100" height="500"></a>
+                            <p class="roll_txtline"><b></b></p>
                         </div>
                     </li>
                 </ul>
@@ -67,7 +67,7 @@
 	
 		<!-- about_area -->
 		<div class="about_area">
-			<h2>OOOO OOOOO 스프링 <b>TOP 3</b></h2>
+			<h2> 경험해보세요! 맛의 차이를. </h2>
 			<div class="about_box">
 				<ul class="place_list box_inner clear">
 					<c:forEach items="${boardList}" var="boardVO" varStatus="status">
