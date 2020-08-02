@@ -196,7 +196,7 @@ footer .foot_area .snslink li + li + li a {background-image:url(../img/ico_insta
 
 /* about_area */
 .about_area {}
-.about_area h2 {padding:55px 0 105px; text-align:center; font-size:40px; color:#fff; background-color: #252527;}
+.about_area h2 {padding:55px 0 105px; text-align:center; font-size:40px; color:#fff; background-color: #252527; margin-top:250px;}
 .about_area .about_box {background:#f4f0e9;}
 .about_area .place_list {}
 .about_area .place_list li {float:left; width:32%; margin-left:2%; text-align:center; position:relative; top:-50px;}
