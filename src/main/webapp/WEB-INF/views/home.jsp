@@ -12,21 +12,21 @@
                     <li class="imglist0">
                         <div class="roll_content">
                             <a href="/resources/home/javascript:;">
-                            <img src="/resources/home/img/hotdog1.png" width="100%" height="500"></a>
+                            <img src="/resources/home/img/hotdog1.png" width="100%" height="700"></a>
                             <p class="roll_txtline"><b></b></p>
                         </div>
                     </li>
                     <li class="imglist1">
                         <div class="roll_content">
                             <a href="/resources/home/javascript:;">
-                            <img src="/resources/home/img/hotdog2.png" width="100%" height="500"></a>
+                            <img src="/resources/home/img/hotdog2.png" width="100%" height="700"></a>
                             <p class="roll_txtline"><b></b></p>
                         </div>
                     </li> 
                     <li class="imglist2">
                         <div class="roll_content">
                             <a href="/resources/home/javascript:;">
-                            <img src="/resources/home/img/hotdog3.png" width="100%" height="500"></a>
+                            <img src="/resources/home/img/hotdog3.png" width="100%" height="700"></a>
                             <p class="roll_txtline"><b></b></p>
                         </div>
                     </li>
@@ -93,7 +93,7 @@
 							</c:if>
 							<h3>${boardVO.title}</h3>
 							<p class="txt">${boardVO.content}</p>
-							<span class="view">VIEW</span></a>
+							<span class="view">더보기</span></a>
 						</li>
 						</c:if>
 					</c:forEach>

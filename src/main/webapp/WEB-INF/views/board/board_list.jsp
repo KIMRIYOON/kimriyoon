@@ -10,7 +10,7 @@
 		<!-- location_area -->
 		<div class="location_area customer">
 			<div class="box_inner">
-				<h2 class="tit_page">스프링 <span class="in">in</span> 자바</h2>
+				<h2 class="tit_page"> 게시판 </h2>
 				<p class="location">고객센터 <span class="path">/</span> 공지사항</p>
 				<ul class="page_menu clear">
 					<li><a href="#" onclick="return false" class="on">공지사항</a></li>
